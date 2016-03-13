@@ -1,0 +1,480 @@
+doctype html
+html
+  head
+    title The Big Orange Fun Day
+    // Meta
+    meta(charset='utf-8')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    meta(name='description', content='Zoe Conway is your average 24 year old loving life and living it to the max when in October last year after suffering severe headaches for two weeks when she went to her doctors and was then sent to Frimley Park Hospital to have her eyes checked as some bleeding was found behind her eyes from that she was admitted into hospital and bloods taken from there that night to St Georges Hospital in ambulance and admitted to Ruth Myles.')
+    |     
+    meta(name='author', content='')
+    // Favicon
+    link(rel='shortcut icon', href='favicon.ico')
+    // Web Fonts
+    link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=cyrillic,latin')
+    // CSS Global Compulsory
+    link(rel='stylesheet', href='assets/plugins/bootstrap/css/bootstrap.min.css')
+    |     
+    link(rel='stylesheet', href='assets/css/one.style.css')
+    // CSS Footer
+    link(rel='stylesheet', href='assets/css/footers/footer-v7.css')
+    // CSS Implementing Plugins
+    link(rel='stylesheet', href='assets/plugins/animate.css')
+    |     
+    link(rel='stylesheet', href='assets/plugins/line-icons/line-icons.css')
+    |     
+    link(rel='stylesheet', href='assets/plugins/font-awesome/css/font-awesome.min.css')
+    |     
+    link(rel='stylesheet', href='assets/plugins/pace/pace-flash.css')
+    |     
+    link(rel='stylesheet', href='assets/plugins/owl-carousel/owl.carousel.css')
+    |     
+    link(rel='stylesheet', href='assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css')
+    |     
+    link(rel='stylesheet', href='assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css')
+    |     
+    link(rel='stylesheet', href='assets/plugins/revolution-slider/rs-plugin/css/settings.css', type='text/css', media='screen')
+    //if lt IE 9
+      link(rel='stylesheet', href='assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css', type='text/css', media='screen')
+    // Style Switcher
+    link(rel='stylesheet', href='assets/css/plugins/style-switcher.css')
+    // CSS Theme
+    link#style_color(rel='stylesheet', href='assets/css/theme-colors/orange.css')
+    |     
+    link(rel='stylesheet', href='assets/css/theme-skins/one.dark.css')
+    // CSS Customization
+    link(rel='stylesheet', href='assets/css/custom.css')
+  //
+    The #page-top ID is part of the scrolling feature.
+    The data-spy and data-target are part of the built-in Bootstrap scrollspy function.
+  body#body.demo-lightbox-gallery(data-spy='scroll', data-target='.one-page-header')
+    // === Header ===
+    nav.one-page-header.navbar.navbar-default.navbar-fixed-top(role='navigation')
+      .container
+        .menu-container.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+            span.sr-only Toggle navigation
+            |                 
+            span.icon-bar
+            |                 
+            span.icon-bar
+            |                 
+            span.icon-bar
+          |             
+          a.navbar-brand(href='#intro')
+            span T
+            | he 
+            span B
+            | ig 
+            span O
+            | range 
+            span F
+            | un 
+            span D
+            | ay
+        // Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse.navbar-ex1-collapse
+          .menu-container
+            ul.nav.navbar-nav
+              li.page-scroll.home
+                a(href='#body') Home
+              |                     
+              li.page-scroll
+                a(href='#about') About
+              |                     
+              li.page-scroll
+                a(href='#attractions') Attractions
+              |                     
+              li.page-scroll
+                a(href='#raffle') Raffle
+              |                     
+              li.page-scroll
+                a(href='#donate') Donate
+    // === End Header ===
+    // Intro Section
+    section#intro.intro-section
+      .fullscreenbanner-container
+        .fullscreenbanner
+          ul
+            // SLIDE 1
+            li(data-transition='curtain-1', data-slotamount='5', data-masterspeed='700', data-title='Slide 1')
+              // MAIN IMAGE
+              img(src='assets/img/sliders/revolution/HiRes.jpg', alt='slidebg1', data-bgfit='cover', data-bgposition='center center', data-bgrepeat='no-repeat')
+              // LAYERS
+              .tp-caption.rs-caption-1.sft.start(data-x='center', data-hoffset='0', data-y='100', data-speed='800', data-start='2000', style='z-index: 6; background-color:rgba(0, 0, 0, 0.5);', data-easing='Back.easeInOut', data-endspeed='300')
+                | A FAMILY FUN DAY AND CHARITY FOOTBALL MATCH
+              // LAYER
+              .tp-caption.rs-caption-2.sft(data-x='center', data-hoffset='0', data-y='200', data-speed='1000', data-start='3000', data-easing='Power4.easeOut', data-endspeed='300', data-endeasing='Power1.easeIn', data-captionhidden='off', style='z-index: 6; background-color:rgba(0, 0, 0, 0.5);')
+                | Helping raise money for Leukaemia research
+                br
+                |                         and St. Georges Hospital, London
+              // LAYER
+              .tp-caption.rs-caption-3.sft(data-x='center', data-hoffset='0', data-y='360', data-speed='800', data-start='3500', data-easing='Power4.easeOut', data-endspeed='300', data-endeasing='Power1.easeIn', data-captionhidden='off', style='z-index: 6; background-color:rgba(0, 0, 0, 0.5);')
+                span.page-scroll
+                  a.btn-u.btn-brd.btn-brd-hover.btn-u-light(href='#about') Learn More
+                // <span class="page-scroll"><a href="#attractions" class="btn-u btn-brd btn-brd-hover btn-u-light">Attractions</a></span>
+                // <span class="page-scroll"><a href="#raffle" class="btn-u btn-brd btn-brd-hover btn-u-light">Raffle</a></span>
+          |             
+          .tp-bannertimer.tp-bottom
+          |             
+          .tp-dottedoverlay.twoxtwo
+    // End Intro Section
+    // About Section
+    section#about.about-section.section-first
+      .block-v1
+        .container
+          .row.content-boxes-v3
+            .col-md-5.md-margin-bottom-30
+              i.icon-custom.rounded-x.icon-bg-dark.fa.fa-lightbulb-o
+              |                     
+              .content-boxes-in-v3
+                h2.heading-sm Zoe&apos;s Story
+                |                         
+                p.lead
+                  | Zoe Conway is your average 24 year old loving life and living it to the max when in October last year, after suffering severe headaches for two weeks, she went to her doctors and was referred immediately to Frimley park Hospital to have her eyes checked as some bleeding was found behind her eyes. From that she was admitted into hospital and bloods taken. A consultant was called in and from there she was rushed by Ambulance to St Georges Hospital and admitted to Ruth Myles. The shock and disbelief cannot be described and this Young Girl has fought every day to get better, the care and support given by superb Staff at St Georges cannot be praised enough and with their care we are hopeful for a positive future.
+            |                 
+            .col-md-7
+              i.icon-custom.rounded-x.icon-bg-dark.fa.fa-lightbulb-o
+              |                     
+              .content-boxes-in-v3
+                h2.heading-sm Where and when
+                |                         
+                h3 Saturday 7th May 2016
+                |                         
+                p Cove football club, Squirrel Lane, Farnborough GU14 8PF
+                |                         
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.6035216003825!2d-0.7676092836538652!3d51.30001993366482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48742b26388fa397%3A0x214de9350870db43!2sCove+Football+%26+Social+Club!5e0!3m2!1sen!2suk!4v1456168589682', width='100%', height='450', frameborder='0', style='border:0', allowfullscreen='')
+    // Attractions Section
+    section#attractions
+      .container.content-lg
+        .title-v1
+          h2 Attractions
+          |             
+          p
+            | Come and join us for a 
+            strong fun packed day
+            |  including the following 
+            strong attractions
+            br
+            |                 and 
+            strong entertainment
+        |         
+        .row.service-box-v1
+          .col-md-4.col-sm-6
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa.fa-lightbulb-o
+              |                     
+              h2.heading-md Bouncy Castle
+              |                     
+              p
+                | Supplied by 
+                strong Budget Bouncy Castles
+                |  &pound;2 for an all day pass bouncing on and off as much as you like (10 minutes at a time)
+          |             
+          .col-md-4.col-sm-6
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa.fa-lightbulb-o
+              |                     
+              h2.heading-sm Kiddies Ride
+              |                     
+              p
+                | Supplied by 
+                strong P Smith &amp; Sons Amusements
+                |  Chair o Planes, Tea Cups and Mini Trucks (prices set by P Smith &amp; sons a donation will be made at the end of the day)
+          |             
+          .col-md-4.col-sm-6
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa-lightbulb-o
+              |                     
+              h2.heading-md Millers Ark Petting Farm
+              |                     
+              p
+                | Come and visit the Lambs, Goats, Shetland Ponies, Ducks and Chickens sponsored by MUMS (of Frimley)
+        |         
+        .row.service-box-v1
+          .col-md-4.col-sm-12
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa.fa-lightbulb-o
+              |                     
+              h2.heading-sm Football Tournament
+              |                     
+              p 6-a-side matches running from 10am till the CUP FINAL at 4:30pm (approx)
+          |             
+          .col-md-4.col-sm-12
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa.fa-lightbulb-o
+              |                     
+              h2.heading-sm Kiddie&apos;s fancy-dress
+              |                     
+              p Parade at 1.30pm prizes for best costume in each category
+          |             
+          .col-md-4.col-sm-6
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa.fa-lightbulb-o
+              |                     
+              h2.heading-md Mini go-karts
+              |                     
+              p for ages 6-12 years
+        |         
+        .row.service-box-v1
+          .col-md-8
+            .col-md-6.col-sm-6
+              .service-block.service-block-default
+                i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa.fa-lightbulb-o
+                |                         
+                h2.heading-sm Art &amp; Craft
+                |                         
+                p
+                  | Let the children enjoy painting, colouring and glitter fun. The stall is kindly being run by the lovely Teachers from Peartree Nursery, North Camp
+                |                         
+                p
+                  | Loads of other fun things for the Children or Adults face painting and glitter tattoos etc. etc.
+            |                 
+            .col-md-6.col-sm-12
+              .service-block.service-block-default
+                i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa.fa-lightbulb-o
+                |                         
+                h2.heading-sm Tombola
+                |                         
+                p Pay, pick a ticket and get an instant prize
+            |                 
+            .col-md-6.col-sm-12
+              .service-block.service-block-default
+                i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa.fa-lightbulb-o
+                |                         
+                h2.heading-sm Tea Tent
+                |                         
+                p
+                  | Take the weight of your feet with an English Cream Tea and relax whilst catching all the fun of the day
+                |                         
+                h2.heading-sm BBQ
+                |                         
+                p
+                  | Treat yourself to Russell&apos;s amazing meat treats, Jumbo Sausages, Chicken Breast Burgers and create your own burger
+                  br
+                  |                             Vegetarian options will be  available
+          |             
+          .col-md-4
+            .col-md-12.col-sm-12
+              .service-block.service-block-default
+                i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa.fa-lightbulb-o
+                |                         
+                h2.heading-sm Stalls
+                |                         
+                p Pick and Mix sweet stall
+                |                         
+                p Homecraft &amp; Gifts
+                |                         
+                p Stylish Handbags
+                |                         
+                p Cupcakes and Cake Designs
+                |                         
+                p Boweautiful Bows
+                |                         
+                p Scrabble Pictures
+                |                         
+                p Younique Make-up
+    section#raffle
+      .container.content-lg
+        .title-v1
+          h2 Raffle
+          |             
+          p
+            | Tickets will be sold all day &pound;1 a strip and the 
+            strong BIG DRAW
+            |  will be held at Farnborough Town Football Club, where the disco will be held from 7:30pm
+        |         
+        .title-v1
+          h2 Super Star Prizes!
+        |         
+        .row.service-box-v1
+          .col-md-4.col-sm-6
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-sm Flight in a Biplane
+          |             
+          .col-md-4.col-sm-6
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-md Top Prize: Holiday in St Lucia
+              |                     
+              p
+                | Two Bedroom Apartment sleeping up to 4 people, accomodation only, flights not included.
+          |             
+          .col-md-4.col-sm-12
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-sm Day at the Races
+              |                     
+              p
+                | Enjoy an incredible day out at the Races, complete with your very own chauffeur
+                | driven Rolls Royce to and from the event!
+        |         
+        .row.service-box-v1
+          .col-md-4.col-sm-6
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-md Gosport to Cowes Yacht Trip
+              |                     
+              p (and back)
+          |             
+          .col-md-4.col-sm-6
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-sm Two tickets to Middlesex Cricket at Lords Cricket Ground
+          |             
+          .col-md-4.col-sm-6
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-sm Dinner for two at top London Restaurant Kiru
+          |             
+          .col-md-4.col-sm-12
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-sm Flight in a Helicopter
+          |             
+          .col-md-4.col-sm-12
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-sm
+                | Simulator session and factory tour for two people and signed Le  Mans Race Suit courtesy of Strakka Racing
+          |             
+          .col-md-4.col-sm-12
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-sm
+                | Four Tickets and hospitality to the Nurburgring 6 hrs race on 24th July
+              p (accommodation &amp; Travel not Included)
+          |             
+          .col-md-4.col-sm-12
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-sm Millars Ark family pass
+          |             
+          .col-md-4.col-sm-12
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-sm Brocketts Farm family Pass
+          |             
+          .col-md-4.col-sm-12
+            .service-block.service-block-default
+              i.icon-custom.icon-lg.icon-bg-u.rounded-x.icon-line.icon-present
+              |                     
+              h2.heading-sm And many more fantastic prizes to be won
+        |         
+        .title-v1
+          h2 Auction
+          |             
+          p Tottenham Hotspur full team signed shirt from Man city V Tottenham match
+          |             
+          p
+            | Four Tickets and hospitality to the Nurburgring 6 hrs race on 24th July ( accommodation &amp; Travel not Included)
+        |         
+        .title-v1
+          h2 Disco
+          |             
+          p
+            | Best Party night ever with the return of the superstar DJ &quot;Ferris &quot; over 18 only &pound;10 a ticket includes
+            | buffet
+          p
+            | All proceeds will be donated to The Ruth Myles Unit at St Georges Hospital Tooting who have been absolutely
+            | amazing treating and looking after Zoe this is just one way of us all to say thank you oxo
+        |         
+        .title-v1
+          h2 Sponsors
+          |             
+          p
+            a(href='http://www.kirurestaurant.com/') Kiru London
+            | , 
+            a(href='http://www.strakkaracing.com/wp/') Strakka Racing
+            | , 
+            a(href='http://www.mumsltd.co.uk/') Michael Usher Mortgage Services
+            | , 
+            a(href='http://mccarthyventures.com/') McCarthy Ventures
+            | , 
+            a(href='http://pureoffices.co.uk/') Pure Offices
+            |  and 
+            a(href='http://www.twitter.com/headforcode') Head4Code
+    section#donate.contacts-section
+      .container.content-lg
+        .title-v1
+          h2 Make a donation
+          |             
+          p You may donate via our Justgiving.com page
+        |         
+        .title-v1
+          h2 See you on the big day!
+          |             
+          p
+            | We look forward to seeing you on the day, it will be great fun, so please bring your entire family along!
+      |     
+      .copyright-section
+        p
+          | 2016 &copy; All Rights Reserved. Lovingly crafted and sponsored by 
+          a(target='_blank', href='https://twitter.com/headforcode') HeadForCode
+        |         
+        ul.social-icons
+          li
+            a.social_facebook.rounded-x(href='https://www.facebook.com/events/978950555476830/permalink/1028003940571491/', data-original-title='Facebook')
+        |         
+        span.page-scroll
+          a(href='#intro')
+            i.fa.fa-angle-double-up.back-to-top
+    // End Contact Section
+    // JS Global Compulsory
+    script(src='assets/plugins/jquery/jquery.min.js')
+    script(src='assets/plugins/jquery/jquery-migrate.min.js')
+    script(src='assets/plugins/bootstrap/js/bootstrap.min.js')
+    // JS Implementing Plugins
+    script(src='assets/plugins/smoothScroll.js')
+    script(src='assets/plugins/jquery.easing.min.js')
+    script(src='assets/plugins/pace/pace.min.js')
+    script(src='assets/plugins/jquery.parallax.js')
+    script(src='assets/plugins/counter/waypoints.min.js')
+    script(src='assets/plugins/counter/jquery.counterup.min.js')
+    script(src='assets/plugins/owl-carousel/owl.carousel.js')
+    script(src='assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js')
+    script(src='assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js')
+    script(src='assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js')
+    script(src='assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js')
+    script(src='assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js')
+    // JS Page Level
+    script(src='assets/js/one.app.js')
+    script(src='assets/js/forms/login.js')
+    script(src='assets/js/forms/contact.js')
+    script(src='assets/js/plugins/pace-loader.js')
+    script(src='assets/js/plugins/owl-carousel.js')
+    script(src='assets/js/plugins/style-switcher.js')
+    script(src='assets/js/plugins/revolution-slider.js')
+    script(src='assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js')
+    script.
+      jQuery(document).ready(function() {
+      App.init();
+      App.initCounter();
+      App.initParallaxBg();
+      LoginForm.initLoginForm();
+      ContactForm.initContactForm();
+      OwlCarousel.initOwlCarousel();
+      StyleSwitcher.initStyleSwitcher();
+      RevolutionSlider.initRSfullScreen();
+      });
+    //if lt IE 9
+      script(src='assets/plugins/respond.js')
+      script(src='assets/plugins/html5shiv.js')
+      script(src='assets/js/plugins/placeholder-IE-fixes.js')
+      script(src='assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js')
+    //if lt IE 10
+      script(src='assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js')

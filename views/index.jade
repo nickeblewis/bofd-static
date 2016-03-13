@@ -1,0 +1,248 @@
+extends layout
+
+block content
+  nav.one-page-header.navbar.navbar-default.navbar-fixed-top(role='navigation')
+    .container
+      .menu-container.page-scroll
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+          span.sr-only Toggle navigation
+          //|
+          span.icon-bar
+          //|
+          span.icon-bar
+          //|
+          span.icon-bar
+        //|
+        a.navbar-brand(href='#intro')
+          span T
+          | he
+          span B
+          | ig
+          span O
+          | range
+          span F
+          | un
+          span D
+          | ay
+      // Collect the nav links, forms, and other content for toggling
+      .collapse.navbar-collapse.navbar-ex1-collapse
+        .menu-container
+          ul.nav.navbar-nav
+            li.page-scroll.home
+              a(href='#body') Home
+            //|
+            li.page-scroll
+              a(href='#about') About
+            //|
+            li.page-scroll
+              a(href='#attractions') Attractions
+            //|
+            li.page-scroll
+              a(href='#raffle') Raffle
+            //|
+            li.page-scroll
+              a(href='#donate') Donate
+  // === End Header ===
+  // Intro Section
+  section#intro.intro-section
+    .fullscreenbanner-container
+      .fullscreenbanner
+        img(src='img/sliders/revolution/fun-day-web.png', alt='slidebg1', data-bgfit='cover', data-bgposition='center center', data-bgrepeat='no-repeat')
+        //ul
+        //  li(data-transition='curtain-1', data-slotamount='5', data-masterspeed='700', data-title='Slide 1')
+        //    img(src='img/sliders/revolution/HiRes.jpg', alt='slidebg1', data-bgfit='cover', data-bgposition='center center', data-bgrepeat='no-repeat')
+        //    .tp-caption.rs-caption-1.sft.start(data-x='center', data-hoffset='0', data-y='100', data-speed='800', data-start='2000', style='z-index: 6; background-color:rgba(0, 0, 0, 0.5);', data-easing='Back.easeInOut', data-endspeed='300')
+        //      | A FAMILY FUN DAY AND CHARITY FOOTBALL MATCH
+        //    .tp-caption.rs-caption-2.sft(data-x='center', data-hoffset='0', data-y='200', data-speed='1000', data-start='3000', data-easing='Power4.easeOut', data-endspeed='300', data-endeasing='Power1.easeIn', data-captionhidden='off', style='z-index: 6; background-color:rgba(0, 0, 0, 0.5);')
+        //      | Helping raise money for Leukaemia research
+        //      br
+        //      |                         and St. Georges Hospital, London
+        //    .tp-caption.rs-caption-3.sft(data-x='center', data-hoffset='0', data-y='360', data-speed='800', data-start='3500', data-easing='Power4.easeOut', data-endspeed='300', data-endeasing='Power1.easeIn', data-captionhidden='off', style='z-index: 6; background-color:rgba(0, 0, 0, 0.5);')
+        //      span.page-scroll
+        //        a.btn-u.btn-brd.btn-brd-hover.btn-u-light(href='#about') Learn More
+        //.tp-bannertimer.tp-bottom
+        //.tp-dottedoverlay.twoxtwo
+  // End Intro Section
+  // About Section
+  section#about.about-section.section-first
+    .block-v1
+      .container
+        .row.content-boxes-v3
+          .col-md-5.md-margin-bottom-30
+            i.icon-custom.rounded-x.icon-bg-dark.fa.fa-lightbulb-o
+            //|
+            .content-boxes-in-v3
+              h2.heading-sm Zoe&apos;s Story
+              //|
+              p.lead=contentful.story[0].text
+          //|
+          .col-md-7
+            i.icon-custom.rounded-x.icon-bg-dark.fa.fa-lightbulb-o
+            //|
+            .content-boxes-in-v3
+              h2.heading-sm Where and when
+              //|
+              h3 Saturday 7th May 2016
+              //|
+              p Cove football club, Squirrel Lane, Farnborough GU14 8PF
+              //|
+              iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.6035216003825!2d-0.7676092836538652!3d51.30001993366482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48742b26388fa397%3A0x214de9350870db43!2sCove+Football+%26+Social+Club!5e0!3m2!1sen!2suk!4v1456168589682', width='100%', height='450', frameborder='0', style='border:0', allowfullscreen='')
+  // Attractions Section
+  section#attractions
+    //- for post in contentful.attractions
+    //  h4= post.name
+    .container
+      .title-v1
+        h2 Attractions
+
+        p
+          | Come and join us for a
+          strong fun packed day
+          | including the following
+          strong attractions
+          br
+          | and
+          strong entertainment
+      //|
+
+      .container
+        .grid
+          each post in contentful.posts
+            .grid-item
+              .service-block.service-block-default
+                //i.icon-custom.icon-lg.icon-bg-u.rounded-x.fa.fa.fa-lightbulb-o
+                h2.heading-md= post.name
+                != marked(post.longText)
+
+
+  section#raffle
+    .container.content-lg
+      .title-v1
+        h2 Raffle
+        //|
+        p
+          | Tickets will be sold all day &pound;1 a strip and the
+          strong BIG DRAW
+          |  will be held at Farnborough Town Football Club, where the disco will be held from 7:30pm
+      //|
+      .title-v1
+        h2 Super Star Prizes!
+      //|
+      .container
+        .grid
+          each prize in contentful.prizes
+            .grid-item
+              .service-block.service-block-default
+                h2.heading-md= prize.name
+
+                if typeof(prize.longText) != 'undefined'
+                  != marked(prize.longText)
+
+
+      .title-v1
+        h2 Auction
+        //|
+        p Tottenham Hotspur full team signed shirt from Man city V Tottenham match
+        //|
+        p
+          | Four Tickets and hospitality to the Nurburgring 6 hrs race on 24th July ( accommodation &amp; Travel not Included)
+      //|
+      .title-v1
+        h2 Disco
+        //|
+        p
+          | Best Party night ever with the return of the superstar DJ &quot;Ferris &quot; over 18 only &pound;10 a ticket includes
+          | buffet
+        p
+          | All proceeds will be donated to The Ruth Myles Unit at St Georges Hospital Tooting who have been absolutely
+          | amazing treating and looking after Zoe this is just one way of us all to say thank you oxo
+      //|
+      .title-v1
+        h2 Sponsors
+        //|
+        p
+          a(href='http://www.kirurestaurant.com/') Kiru London
+          | ,
+          a(href='http://www.strakkaracing.com/wp/') Strakka Racing
+          | ,
+          a(href='http://www.mumsltd.co.uk/') Michael Usher Mortgage Services
+          | ,
+          a(href='http://mccarthyventures.com/') McCarthy Ventures
+          | ,
+          a(href='http://pureoffices.co.uk/') Pure Offices
+          |  and
+          a(href='http://www.twitter.com/headforcode') Head4Code
+  section#donate.contacts-section
+    .container.content-lg
+      .title-v1
+        h2 Make a donation
+        //|
+        p You may donate via our Justgiving.com page
+      //|
+      .title-v1
+        h2 See you on the big day!
+        //|
+        p
+          | We look forward to seeing you on the day, it will be great fun, so please bring your entire family along!
+    //|
+    .copyright-section
+      p
+        | 2016 &copy; All Rights Reserved. Lovingly crafted and sponsored by
+        a(target='_blank', href='https://twitter.com/headforcode') HeadForCode
+      //|
+      ul.social-icons
+        li
+          a.social_facebook.rounded-x(href='https://www.facebook.com/events/978950555476830/permalink/1028003940571491/', data-original-title='Facebook')
+      //|
+      span.page-scroll
+        a(href='#intro')
+          i.fa.fa-angle-double-up.back-to-top
+  // End Contact Section
+  // JS Global Compulsory
+  script(src='plugins/jquery/jquery.min.js')
+  script(src='plugins/jquery/jquery-migrate.min.js')
+  script(src='plugins/bootstrap/js/bootstrap.min.js')
+  script(src='js/masonry.min.js')
+
+  // JS Implementing Plugins
+  script(src='plugins/smoothScroll.js')
+  script(src='plugins/jquery.easing.min.js')
+  script(src='plugins/pace/pace.min.js')
+  script(src='plugins/jquery.parallax.js')
+  script(src='plugins/counter/waypoints.min.js')
+  script(src='plugins/counter/jquery.counterup.min.js')
+  script(src='plugins/owl-carousel/owl.carousel.js')
+  script(src='plugins/sky-forms-pro/skyforms/js/jquery.form.min.js')
+  script(src='plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js')
+  script(src='plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js')
+  script(src='plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js')
+  script(src='plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js')
+  // JS Page Level
+
+  script(src='js/app.js')
+  script(src='js/forms/login.js')
+  script(src='js/forms/contact.js')
+  script(src='js/plugins/pace-loader.js')
+  script(src='js/plugins/owl-carousel.js')
+  script(src='js/plugins/style-switcher.js')
+  script(src='js/plugins/revolution-slider.js')
+  script(src='js/plugins/cube-portfolio/cube-portfolio-lightbox.js')
+
+  script.
+    jQuery(document).ready(function () {
+      App.init();
+      App.initCounter();
+      App.initParallaxBg();
+      LoginForm.initLoginForm();
+      ContactForm.initContactForm();
+      OwlCarousel.initOwlCarousel();
+      StyleSwitcher.initStyleSwitcher();
+      RevolutionSlider.initRSfullScreen();
+    });
+  //if lt IE 9
+    script(src='plugins/respond.js')
+    script(src='plugins/html5shiv.js')
+    script(src='js/plugins/placeholder-IE-fixes.js')
+    script(src='plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js')
+  //if lt IE 10
+    script(src='plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js')
