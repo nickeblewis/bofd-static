@@ -6,13 +6,9 @@ block content
       .menu-container.page-scroll
         button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
           span.sr-only Toggle navigation
-          //|
           span.icon-bar
-          //|
           span.icon-bar
-          //|
           span.icon-bar
-        //|
         a.navbar-brand(href='#intro')
           span T
           | he&nbsp;
@@ -30,25 +26,23 @@ block content
           ul.nav.navbar-nav
             li.page-scroll.home
               a(href='#body') Home
-            //|
             li.page-scroll
               a(href='#about') About
-            //|
             li.page-scroll
               a(href='#attractions') Attractions
-            //|
             li.page-scroll
               a(href='#raffle') Raffle
-            //|
             li.page-scroll
               a(href='#donate') Donate
   // === End Header ===
+
   // Intro Section
   section#intro.intro-section
     .fullscreenbanner-container
       .fullscreenbanner
-        img(src='img/sliders/revolution/fun-day-web.png', alt='slidebg1', data-bgfit='cover', data-bgposition='center center', data-bgrepeat='no-repeat')
+        img(src='img/sliders/revolution/fun-day-web.png', alt='slidebg1', data-bgfit='cover', data-bgposition='center center', data-bgrepeat='no-repeat')          
   // End Intro Section
+
   // About Section
   section#about.about-section.section-first
     .block-v1
@@ -56,31 +50,23 @@ block content
         .row.content-boxes-v3
           .col-md-5.md-margin-bottom-30
             i.icon-custom.rounded-x.icon-bg-dark.fa.fa-lightbulb-o
-            //|
             .content-boxes-in-v3
               h2.heading-sm Zoe&apos;s Story
-              //|
               p.lead=contentful.story[0].text
-          //|
           .col-md-7
             i.icon-custom.rounded-x.icon-bg-dark.fa.fa-lightbulb-o
-            //|
             .content-boxes-in-v3
               h2.heading-sm Where and when
-              //|
               h3 Saturday 7th May 2016
-              //|
               p Cove football club, Squirrel Lane, Farnborough GU14 8PF
-              //|
               iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.6035216003825!2d-0.7676092836538652!3d51.30001993366482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48742b26388fa397%3A0x214de9350870db43!2sCove+Football+%26+Social+Club!5e0!3m2!1sen!2suk!4v1456168589682', width='100%', height='450', frameborder='0', style='border:0', allowfullscreen='')
+  
   // Attractions Section
   section#attractions
     //- for post in contentful.attractions
-    //  h4= post.name
     .container
       .title-v1
         h2 Attractions
-
         p
           | Come and join us for a&nbsp;
           strong fun packed day&nbsp;
@@ -89,7 +75,6 @@ block content
           br
           | and&nbsp;
           strong entertainment
-      //|
 
       .container
         .grid
@@ -100,20 +85,14 @@ block content
                 h2.heading-md= post.name
                 != marked(post.longText)
 
-
   section#raffle
-    .container.content-lg
+    .container
       .title-v1
         h2 Raffle
-        //|
         p
           | Tickets will be sold all day &pound;1 a strip and the&nbsp;
           strong BIG DRAW
           |  will be held at Farnborough Town Football Club, where the disco will be held from 7:30pm
-      //|
-      .title-v1
-        h2 Super Star Prizes!
-      //|
       .container
         .grid
           each prize in contentful.prizes
@@ -123,29 +102,42 @@ block content
 
                 if typeof(prize.longText) != 'undefined'
                   != marked(prize.longText)
+  
+  section#bigdraw
+    .container
+      //- .title-v1
+        //- h2 Raffle
+        //- p
+        //-   | Tickets will be sold all day &pound;1 a strip and the&nbsp;
+        //-   strong BIG DRAW
+        //-   |  will be held at Farnborough Town Football Club, where the disco will be held from 7:30pm
+      .title-v1
+        h2 Special Raffle
+      
+        
+        each prize in contentful.raffle
+          
+          h2.heading-md= prize.name
 
+          if typeof(prize.longText) != 'undefined'
+            p!= marked(prize.longText)
+            !=prize.video
 
       .title-v1
         h2 Auction
-        //|
         p Tottenham Hotspur full team signed shirt from Man city V Tottenham match
-        //|
         p
           | Four Tickets and hospitality to the Nurburgring 6 hrs race on 24th July ( accommodation &amp; Travel not Included)
-      //|
       .title-v1
         h2 Disco
-        //|
         p
           | Best Party night ever with the return of the superstar DJ &quot;Ferris &quot; over 18 only &pound;10 a ticket includes
           | buffet
         p
           | All proceeds will be donated to The Ruth Myles Unit at St Georges Hospital Tooting who have been absolutely
           | amazing treating and looking after Zoe this is just one way of us all to say thank you oxo
-      //|
       .title-v1
         h2 Sponsors
-        //|
         p
           a(href='http://www.kirurestaurant.com/') Kiru London
           | ,
@@ -158,31 +150,45 @@ block content
           a(href='http://pureoffices.co.uk/') Pure Offices
           |  and&nbsp;
           a(href='http://www.twitter.com/headforcode') Head4Code
+
+  section#auction
+    .container
+      .title-v1
+        h2 Auction
+        p
+          | Tickets will be sold all day &pound;1 a strip and the&nbsp;
+          strong BIG DRAW
+          |  will be held at Farnborough Town Football Club, where the disco will be held from 7:30pm
+      .container
+        .grid
+          each prize in contentful.auction
+            .grid-item
+              .service-block.service-block-default
+                h2.heading-md= prize.name
+
+                if typeof(prize.longText) != 'undefined'
+                  != marked(prize.longText)
+
   section#donate.contacts-section
     .container.content-lg
       .title-v1
         h2 Make a donation
-        //|
         p You may donate via our Justgiving.com page
-      //|
       .title-v1
         h2 See you on the big day!
-        //|
         p
           | We look forward to seeing you on the day, it will be great fun, so please bring your entire family along!
-    //|
     .copyright-section
       p
         | 2016 &copy; All Rights Reserved. Lovingly crafted and sponsored by&nbsp;
         a(target='_blank', href='https://twitter.com/headforcode') HeadForCode
-      //|
       ul.social-icons
         li
           a.social_facebook.rounded-x(href='https://www.facebook.com/events/978950555476830/permalink/1028003940571491/', data-original-title='Facebook')
-      //|
       span.page-scroll
         a(href='#intro')
           i.fa.fa-angle-double-up.back-to-top
+
   // End Contact Section
   // JS Global Compulsory
   script(src='plugins/jquery/jquery.min.js')

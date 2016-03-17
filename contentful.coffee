@@ -9,3 +9,7 @@ module.exports =
       id: 'story'
     prizes:
       id: 'prizes'
+    raffle:
+      id: 'raffle'
+    auction:
+      id: 'auction'
