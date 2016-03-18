@@ -8,8 +8,7 @@
 var App = function () {
 	$('.grid').masonry({
 		// options
-		itemSelector: '.grid-item',
-		columnWidth: 280
+		itemSelector: '.grid-item'
 	});
 	//Fixed Header
 	function handleHeader() {

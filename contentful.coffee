@@ -13,3 +13,5 @@ module.exports =
       id: 'raffle'
     auction:
       id: 'auction'
+    sponsors:
+      id: 'sponsors'

@@ -93,6 +93,8 @@ block content
           | Tickets will be sold all day &pound;1 a strip and the&nbsp;
           strong BIG DRAW
           |  will be held at Farnborough Town Football Club, where the disco will be held from 7:30pm
+        p
+          | Tickets also available in advance from Peter Matthews, text or call 07810 865650
       .container
         .grid
           each prize in contentful.prizes
@@ -102,16 +104,12 @@ block content
 
                 if typeof(prize.longText) != 'undefined'
                   != marked(prize.longText)
-  
+
+
   section#bigdraw
     .container
-      //- .title-v1
-        //- h2 Raffle
-        //- p
-        //-   | Tickets will be sold all day &pound;1 a strip and the&nbsp;
-        //-   strong BIG DRAW
-        //-   |  will be held at Farnborough Town Football Club, where the disco will be held from 7:30pm
       .title-v1
+        h2 AND MANY MORE FANTASTIC PRIZES TO BE WON
         h2 Special Raffle
       
         
@@ -123,11 +121,19 @@ block content
             p!= marked(prize.longText)
             !=prize.video
 
+
       .title-v1
         h2 Auction
-        p Tottenham Hotspur full team signed shirt from Man city V Tottenham match
-        p
-          | Four Tickets and hospitality to the Nurburgring 6 hrs race on 24th July ( accommodation &amp; Travel not Included)
+      .container
+        .grid
+          each prize in contentful.auction
+            .grid-item
+              .service-block.service-block-default
+                if typeof(prize.longText) != 'undefined'
+                  != marked(prize.longText)
+
+                h2.heading-md= prize.name
+
       .title-v1
         h2 Disco
         p
@@ -135,39 +141,20 @@ block content
           | buffet
         p
           | All proceeds will be donated to The Ruth Myles Unit at St Georges Hospital Tooting who have been absolutely
-          | amazing treating and looking after Zoe this is just one way of us all to say thank you oxo
-      .title-v1
-        h2 Sponsors
-        p
-          a(href='http://www.kirurestaurant.com/') Kiru London
-          | ,
-          a(href='http://www.strakkaracing.com/wp/') Strakka Racing
-          | ,
-          a(href='http://www.mumsltd.co.uk/') Michael Usher Mortgage Services
-          | ,
-          a(href='http://mccarthyventures.com/') McCarthy Ventures
-          | ,
-          a(href='http://pureoffices.co.uk/') Pure Offices
-          |  and&nbsp;
-          a(href='http://www.twitter.com/headforcode') Head4Code
+          | amazing treating and looking after Zoe this is just one way of us all to say thank you
 
+      .title-v1
+        h2 Sponsors      
+        div.sponsors
+          each sponsor in contentful.sponsors  
+            .sponsor-item          
+
+              a(href=sponsor.website)
+                img(src!= asset(sponsor.logo, {w: 160, h: 160, q: 50}))
+                    
   section#auction
     .container
-      .title-v1
-        h2 Auction
-        p
-          | Tickets will be sold all day &pound;1 a strip and the&nbsp;
-          strong BIG DRAW
-          |  will be held at Farnborough Town Football Club, where the disco will be held from 7:30pm
-      .container
-        .grid
-          each prize in contentful.auction
-            .grid-item
-              .service-block.service-block-default
-                h2.heading-md= prize.name
-
-                if typeof(prize.longText) != 'undefined'
-                  != marked(prize.longText)
+      
 
   section#donate.contacts-section
     .container.content-lg
