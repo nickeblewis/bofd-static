@@ -3865,5 +3865,6 @@ img.img-center,
 /* Masonry */
 .grid-item { width: 280px; }
 .grid-item--sponsor { width: 160px; height: 160px; }
-.sponsors { margin: 0 auto; width: 100%; }
+
+.sponsors { margin: 0 auto; }
 .sponsor-item { padding: 10px; float: left;  }
